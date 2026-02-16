@@ -1,34 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website Isaac</title>
+    <title>Isaac - Desarrollador Full Stack</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="#" class="nav__logo">Isaac<span class="accent">.</span></a>
 
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">Habilidades</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">Experiencia</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Proyectos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link nav__link--cta">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
+
+    <main class="main">
+        <!--------------------------HOME-------------------------------->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <div class="home__content">
+                    <span class="home__greeting">Hola, soy</span>
+                    <h1 class="home__title">Isaac</h1>
+                    <h2 class="home__subtitle">Desarrollador Full Stack</h2>
+                    <p class="home__description">
+                        Especializado en crear experiencias web modernas y funcionales
+                        con tecnologías Java y JavaScript.
+                    </p>
+                    <div class="home__buttons">
+                        <a href="#contact" class="button button--primary">Trabajemos juntos</a>
+                        <a href="#projects" class="button button--ghost">Ver proyectos</a>
+                    </div>
+                </div>
+                <div class="home__image">
+                    <div class="home__blob"></div>
+                </div>
+            </div>
+            <div class="home__scroll">
+                <a href="#skills" class="home__scroll-button">
+                    <span>Scroll</span>
+                    <div class="home__scroll-line"></div>
+                </a>
+            </div>
+        </section>
+
         <!--------------------------SKILLS-------------------------------->
-        <section class="skills-section" id="skills"></section>
+        <section class="skills section" id="skills">
+            <div class="container">
+                <span class="section__subtitle">Mi stack tecnológico</span>
+                <h2 class="section__title">Habilidades</h2>
+
+                <div class="skills__container">
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">Frontend</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#html5"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">HTML5</h4>
+                                    <span class="skill__level">Avanzado</span>
+                                </div>
+                            </div>
+
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#css"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">CSS3</h4>
+                                    <span class="skill__level">Avanzado</span>
+                                </div>
+                            </div>
+
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#js"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">JavaScript</h4>
+                                    <span class="skill__level">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#bootstrap"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">Bootstrap</h4>
+                                    <span class="skill__level">Intermedio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__group">
+                        <h3 class="skills__group-title">Backend</h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#java"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">Java</h4>
+                                    <span class="skill__level">Avanzado</span>
+                                </div>
+                            </div>
+
+                            <div class="skill__item">
+                                <svg class="skill__icon">
+                                    <use href="/assets/sprite.svg#spring"></use>
+                                </svg>
+                                <div class="skill__data">
+                                    <h4 class="skill__name">Spring Boot</h4>
+                                    <span class="skill__level">Intermedio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--------------------------QUALIFICATION-------------------------------->
-        <section class="qualification-section" id="qualification"></section>
+        <section class="qualification section" id="qualification">
+            <div class="container">
+                <span class="section__subtitle">Mi trayectoria</span>
+                <h2 class="section__title">Experiencia & Educación</h2>
+
+                <div class="qualification__container">
+                    <div class="qualification__tabs">
+                        <button class="qualification__tab qualification__tab--active" data-target="#education">
+                            <svg class="qualification__tab-icon" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                            Educación
+                        </button>
+                        <button class="qualification__tab" data-target="#experience">
+                            <svg class="qualification__tab-icon" width="24" height="24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                            Experiencia
+                        </button>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!-- Education Content -->
+                        <div class="qualification__content qualification__content--active" id="education">
+                            <div class="qualification__data">
+                                <div class="qualification__info">
+                                    <h3 class="qualification__title">Ingeniería en Sistemas</h3>
+                                    <span class="qualification__subtitle">Instituto Tecnologico de Orizaba</span>
+                                    <div class="qualification__calendar">
+                                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <path d="M16 2v4M8 2v4M3 10h18" />
+                                        </svg>
+                                        2019 - 2023
+                                    </div>
+                                </div>
+                                <!--LINEA DEL TIEMPO DERECHA-->
+                                <div class="qualification__line">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__connector"></span>
+                                </div>
+                            </div>
+
+                            <div class="qualification__data">
+                                <div class="qualification__info">
+                                    <h3 class="qualification__title">Desarrollo Full Stack</h3>
+                                    <span class="qualification__subtitle">Generation</span>
+                                    <div class="qualification__calendar">
+                                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <path d="M16 2v4M8 2v4M3 10h18" />
+                                        </svg>
+                                        2025-2026
+                                    </div>
+                                </div>
+                                <div class="qualification__line">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__connector"></span>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <!-- Experience Content -->
+                        <div class="qualification__content" id="experience">
+                            <div class="qualification__data">
+                                <div class="qualification__info">
+                                    <h3 class="qualification__title">Desarrollador Full Stack Jr</h3>
+                                    <span class="qualification__subtitle">IXEL Artesanias.</span>
+                                    <div class="qualification__calendar">
+                                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <path d="M16 2v4M8 2v4M3 10h18" />
+                                        </svg>
+                                        2025 - Presente
+                                    </div>
+                                </div>
+                                <div class="qualification__line">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__connector"></span>
+                                </div>
+                            </div>
+
+                            <div class="qualification__data">
+                                <div class="qualification__info">
+                                    <h3 class="qualification__title">Profesionista TICS.</h3>
+                                    <span class="qualification__subtitle">Comisión Federal de Electricidad</span>
+                                    <div class="qualification__calendar">
+                                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                            <path d="M16 2v4M8 2v4M3 10h18" />
+                                        </svg>
+                                        Julio 2023 - Diciembre 2023
+                                    </div>
+                                </div>
+                                <div class="qualification__line">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__connector"></span>
+                                </div>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--------------------------PROJECTS-------------------------------->
-        <section class="projects-section" id="projects"></section>
+        <section class="projects section" id="projects">
+            <div class="container">
+                <span class="section__subtitle">Portfolio</span>
+                <h2 class="section__title">Proyectos Destacados</h2>
+
+                <div class="projects__container">
+                    <article class="project__card">
+                        <div class="project__image">
+                            <div class="project__placeholder">
+                                <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="4" y="4" width="56" height="56" rx="4" />
+                                    <path d="M4 16h56M16 4v56" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Full Stack</span>
+                            <h3 class="project__title">Sistema de Gestión E-commerce</h3>
+                            <p class="project__description">
+                                Plataforma completa de comercio electrónico con panel de administración,
+                                Ixel Artesanias.
+                            </p>
+                            <div class="project__stack">
+                                <span class="project__tech">Spring Boot</span>
+                                <span class="project__tech">JavaScript</span>
+                                <span class="project__tech">MySQL</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="#" class="project__link">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                    Código
+                                </a>
+                                <a href="#" class="project__link project__link--primary">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__image">
+                            <div class="project__placeholder">
+                                <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="32" cy="32" r="28" />
+                                    <path d="M32 12v20M22 22l10 10 10-10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Backend</span>
+                            <h3 class="project__title">API RESTful de Gestión</h3>
+                            <p class="project__description">
+                                API robusta con autenticación JWT, documentación Swagger y
+                                arquitectura escalable para gestión de usuarios y recursos.
+                            </p>
+                            <div class="project__stack">
+                                <span class="project__tech">Java</span>
+                                <span class="project__tech">Spring Boot</span>
+                                <span class="project__tech">PostgreSQL</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="#" class="project__link">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                    Código
+                                </a>
+                                <a href="#" class="project__link project__link--primary">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                                    </svg>
+                                    Docs
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__image">
+                            <div class="project__placeholder">
+                                <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M8 8h48v48H8z" />
+                                    <path d="M20 20h24M20 32h24M20 44h16" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Frontend</span>
+                            <h3 class="project__title">Dashboard Interactivo</h3>
+                            <p class="project__description">
+                                Panel de control con visualización de datos, gráficos dinámicos
+                                y diseño responsive para análisis de métricas empresariales.
+                            </p>
+                            <div class="project__stack">
+                                <span class="project__tech">HTML5</span>
+                                <span class="project__tech">CSS3</span>
+                                <span class="project__tech">JavaScript</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="#" class="project__link">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                    Código
+                                </a>
+                                <a href="#" class="project__link project__link--primary">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!--------------------------CONTACT-------------------------------->
-        <section class="contact-section" id="contact"></section>
+        <section class="contact section" id="contact">
+            <div class="container">
+                <span class="section__subtitle">Hablemos</span>
+                <h2 class="section__title">Contacto</h2>
 
+                <div class="contact__container">
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">¿Tienes un proyecto en mente?</h3>
+                        <p class="contact__info-description">
+                            Estoy disponible para proyectos freelance o posiciones full-time.
+                            Siempre abierto a discutir ideas interesantes y colaboraciones.
+                        </p>
 
+                        <div class="contact__cards">
+                            <div class="contact__card">
+                                <svg class="contact__card-icon" width="32" height="32" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <path d="M22 6l-10 7L2 6" />
+                                </svg>
+                                <div class="contact__card-data">
+                                    <h4 class="contact__card-title">Email</h4>
+                                    <a href="mailto:isaac@email.com" class="contact__card-info">isaac@email.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__card">
+                                <svg class="contact__card-icon" width="32" height="32" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <div class="contact__card-data">
+                                    <h4 class="contact__card-title">Teléfono</h4>
+                                    <a href="tel:+525512345678" class="contact__card-info">+52 55 1234 5678</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__card">
+                                <svg class="contact__card-icon" width="32" height="32" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <div class="contact__card-data">
+                                    <h4 class="contact__card-title">Ubicación</h4>
+                                    <span class="contact__card-info">Ciudad de México, México</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact__form" id="contact-form">
+                        <div class="contact__form-group">
+                            <label for="name" class="contact__form-label">Nombre</label>
+                            <input type="text" id="name" name="name" class="contact__form-input"
+                                placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__form-label">Email</label>
+                            <input type="email" id="email" name="email" class="contact__form-input"
+                                placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label for="subject" class="contact__form-label">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="contact__form-input"
+                                placeholder="¿De qué quieres hablar?" required>
+                        </div>
+
+                        <div class="contact__form-group contact__form-group--full">
+                            <label for="message" class="contact__form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="contact__form-input contact__form-textarea"
+                                placeholder="Cuéntame sobre tu proyecto..." rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button--primary button--block">
+                            Enviar mensaje
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-    <!--------------------------FOOTER-------------------------------->
-    <footer></footer>
 
+    <!--------------------------FOOTER-------------------------------->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Isaac<span class="accent">.</span></a>
+                <p class="footer__description">
+                    Desarrollador Full Stack apasionado por crear soluciones web elegantes y eficientes.
+                </p>
+            </div>
+
+            <div class="footer__links">
+                <div class="footer__group">
+                    <h4 class="footer__title">Navegación</h4>
+                    <ul class="footer__list">
+                        <li><a href="#home" class="footer__link">Inicio</a></li>
+                        <li><a href="#skills" class="footer__link">Habilidades</a></li>
+                        <li><a href="#qualification" class="footer__link">Experiencia</a></li>
+                        <li><a href="#projects" class="footer__link">Proyectos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h4 class="footer__title">Redes</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link" target="_blank">GitHub</a></li>
+                        <li><a href="#" class="footer__link" target="_blank">LinkedIn</a></li>
+                        <li><a href="#" class="footer__link" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h4 class="footer__title">Contacto</h4>
+                    <ul class="footer__list">
+                        <li><a href="mailto:isaac@email.com" class="footer__link">Email</a></li>
+                        <li><a href="tel:+525512345678" class="footer__link">Teléfono</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copy">
+                    &copy; 2025 Isaac. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
